@@ -86,6 +86,10 @@ class NodeGroup(object):
         nodes = list(self.nodesLUT.values())
         return nodes[0]
 
+    def ghostStartNode(self):
+        nodes = list(self.nodesLUT.values())
+        return nodes[1]
+
     def render(self, screen):
         for node in self.nodesLUT.values():
             node.render(screen)
